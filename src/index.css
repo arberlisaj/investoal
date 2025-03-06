@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
-body {
-  @apply p-2;
+*{
+  scroll-behavior: smooth;
+}
+
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .hide_on_desktop{
+    display: none;
+  }
 }

@@ -1,17 +1,11 @@
-import { useState } from "react";
+import Investoal from "./components/Investoal";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <main>
-      <h1 className="text-red-500 font-bold text-2xl">{count}</h1>
-      <button
-        className="border rounded p-2"
-        onClick={() => setCount((prevCount) => prevCount + 1)}
-      >
-        increment
-      </button>
+      <Navbar />
+      <Investoal />
     </main>
   );
 }
