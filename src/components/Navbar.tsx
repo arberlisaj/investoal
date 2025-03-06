@@ -58,7 +58,7 @@ const Navbar = () => {
             <li key={section} className="mb-4">
               <a
                 href={`#${section}`}
-                className="capitalize text-center"
+                className="capitalize"
                 onClick={closeMenu}
               >
                 {section.replace("-", " ")}
