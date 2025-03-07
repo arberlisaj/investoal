@@ -3,7 +3,7 @@ import { ArrowRight, Building, TrendingUp, Globe } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen">
+    <section id="home" className="relative min-h-screen">
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,4 +1,5 @@
 import { Briefcase, Building, Code, Globe, MapPin } from "lucide-react";
+import southAlbaniaImage from "../assets/south-albania.jpeg";
 
 const About = () => {
   return (
@@ -20,7 +21,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="/placeholder.svg?height=600&width=800"
+              src={southAlbaniaImage}
               alt="Albanian landscape with mountains and coastline"
               width={800}
               height={600}

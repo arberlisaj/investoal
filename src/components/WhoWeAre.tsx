@@ -1,3 +1,5 @@
+import officeImage from "../assets/office.png";
+
 const WhoWeAre = () => {
   return (
     <section className="py-20 bg-white">
@@ -23,8 +25,8 @@ const WhoWeAre = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-red-600 rounded-lg opacity-20"></div>
               <img
-                src="/placeholder.svg?height=500&width=600"
-                alt="Investoal team"
+                src={officeImage}
+                alt="Office building"
                 width={600}
                 height={500}
                 className="rounded-lg shadow-lg relative z-10"

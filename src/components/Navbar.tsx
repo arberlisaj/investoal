@@ -23,18 +23,16 @@ const Navbar = () => {
             <CiMenuFries size={24} />
           </button>
           <ul className="hidden md:flex space-x-6">
-            {["home", "about", "foresight", "focus", "contact"].map(
-              (section) => (
-                <li key={section}>
-                  <a
-                    href={`#${section}`}
-                    className="hover:text-[#b21933] capitalize"
-                  >
-                    {section.replace("-", " ")}
-                  </a>
-                </li>
-              )
-            )}
+            {["home", "about", "focus", "contact"].map((section) => (
+              <li key={section}>
+                <a
+                  href={`#${section}`}
+                  className="hover:text-[#b21933] capitalize"
+                >
+                  {section.replace("-", " ")}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
@@ -50,7 +48,7 @@ const Navbar = () => {
         } transition-transform z-50 p-6`}
       >
         <ul>
-          {["home", "about", "foresight", "focus", "contact"].map((section) => (
+          {["home", "about", "focus", "contact"].map((section) => (
             <li key={section} className="mb-4">
               <a
                 href={`#${section}`}

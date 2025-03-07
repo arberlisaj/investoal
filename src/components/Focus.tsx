@@ -1,4 +1,7 @@
 import { CheckCircle } from "lucide-react";
+import realEstateDevelopmentImage from "../assets/real-estate.jpg";
+import startupImage from "../assets/startup.jpg";
+import innovationImage from "../assets/innovation.jpg";
 
 const Focus = () => {
   return (
@@ -20,9 +23,9 @@ const Focus = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:transform hover:scale-105">
             <div className="h-48 bg-gray-200 relative">
               <img
-                src="./china.png"
+                src={realEstateDevelopmentImage}
                 alt="Real Estate Development"
-                className="object-cover"
+                className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4">
@@ -67,9 +70,9 @@ const Focus = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:transform hover:scale-105">
             <div className="h-48 bg-gray-200 relative">
               <img
-                src="/placeholder.svg?height=300&width=500"
+                src={startupImage}
                 alt="Business & Startup Investments"
-                className="object-cover"
+                className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4">
@@ -113,9 +116,9 @@ const Focus = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:transform hover:scale-105">
             <div className="h-48 bg-gray-200 relative">
               <img
-                src="/placeholder.svg?height=300&width=500"
+                src={innovationImage}
                 alt="Technology & Innovation"
-                className="object-cover"
+                className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4">
