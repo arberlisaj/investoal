@@ -25,12 +25,12 @@ const Navbar = () => {
             <CiMenuFries size={24} />
           </button>
 
-          <ul className="hidden md:flex space-x-6">
+          <ul className="hidden md:flex gap-2">
             {navItems.map((section) => (
               <li key={section}>
                 <a
                   href={"#" + section}
-                  className="block px-4 py-2 rounded-md text-gray-700 hover:text-red-800 transition-colors"
+                  className="block p-2 rounded-md text-gray-700 hover:text-red-800 transition-colors"
                   onClick={closeMenu}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
