@@ -1,7 +1,6 @@
 import { useState } from "react";
 import websiteLogoImage from "../assets/website-logo.png";
 import { CiMenuFries } from "react-icons/ci";
-import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -50,9 +49,6 @@ const Navbar = () => {
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform z-50 p-6`}
       >
-        <button className="text-xl mb-4" onClick={closeMenu}>
-          <IoMdClose />
-        </button>
         <ul>
           {["home", "about", "foresight", "focus", "contact"].map((section) => (
             <li key={section} className="mb-4">
