@@ -30,7 +30,7 @@ const Navbar = () => {
               <li key={section}>
                 <a
                   href={"#" + section}
-                  className="block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-red-800 transition-colors"
+                  className="block px-4 py-2 rounded-md text-gray-700 hover:text-red-800 transition-colors"
                   onClick={closeMenu}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
