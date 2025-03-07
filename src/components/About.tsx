@@ -1,4 +1,4 @@
-import { Briefcase, Building, Code, Globe, MapPin } from "lucide-react";
+import { Briefcase, Building, Code, Globe, MapPin, Shield } from "lucide-react";
 import southAlbaniaImage from "../assets/south-albania.jpeg";
 
 const About = () => {
@@ -41,7 +41,9 @@ const About = () => {
                   <h4 className="font-semibold text-lg">Strategic Location</h4>
                   <p className="text-gray-600">
                     Positioned in the heart of the Balkans, Albania offers easy
-                    access to major European trade routes.
+                    access to major European trade routes and direct access to
+                    the Adriatic and Ionian Seas, making it a key hub for
+                    regional and global trade.
                   </p>
                 </div>
               </li>
@@ -54,8 +56,9 @@ const About = () => {
                     Favorable Business Climate
                   </h4>
                   <p className="text-gray-600">
-                    A pro-business government, low corporate taxes, and
-                    streamlined investment procedures attract foreign investors.
+                    A pro-business government, low and competitive tax tariffs,
+                    and streamlined investment procedures make Albania an
+                    attractive destination for foreign investors.
                   </p>
                 </div>
               </li>
@@ -68,9 +71,9 @@ const About = () => {
                     Growing Real Estate Sector
                   </h4>
                   <p className="text-gray-600">
-                    Rapid urbanization and an increasing demand for modern
-                    housing and commercial spaces make real estate a profitable
-                    sector.
+                    Rapid urbanization and increasing demand for modern housing
+                    and commercial spaces create profitable opportunities in
+                    real estate.
                   </p>
                 </div>
               </li>
@@ -83,8 +86,9 @@ const About = () => {
                     Tourism & Hospitality Boom
                   </h4>
                   <p className="text-gray-600">
-                    With stunning coastlines and UNESCO heritage sites,
-                    Albania's tourism industry is expanding significantly.
+                    With stunning coastlines along the Adriatic and Ionian Seas
+                    and UNESCO heritage sites, Albania’s tourism industry is
+                    expanding rapidly.
                   </p>
                 </div>
               </li>
@@ -97,8 +101,24 @@ const About = () => {
                     Emerging Tech & Innovation
                   </h4>
                   <p className="text-gray-600">
-                    A rising startup ecosystem fueled by young entrepreneurs and
-                    digital transformation.
+                    A rising startup ecosystem driven by young entrepreneurs and
+                    digital transformation is positioning Albania as a growing
+                    tech hub
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="mt-1 bg-red-100 p-1 rounded-full">
+                  <Shield className="h-5 w-5 text-red-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg">
+                    Security & Stability
+                  </h4>
+                  <p className="text-gray-600">
+                    As a NATO member and a country on the path to joining the
+                    European Union, Albania offers a safe and stable environment
+                    for investors.
                   </p>
                 </div>
               </li>
