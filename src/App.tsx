@@ -9,6 +9,7 @@ const Focus = lazy(() => import("./components/Focus"));
 const WhyJoinUs = lazy(() => import("./components/WhyJoinUs"));
 const CTA = lazy(() => import("./components/CTA"));
 const Contact = lazy(() => import("./components/Contact"));
+const Sponsors = lazy(() => import("./components/Sponsors"));
 const Footer = lazy(() => import("./components/Footer"));
 
 const LoadingSpinner = () => (
@@ -48,6 +49,7 @@ export default function InvestoalHero() {
         <Focus />
         <WhyJoinUs />
         <CTA />
+        <Sponsors />
         <Contact />
         <Footer />
       </Suspense>

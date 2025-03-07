@@ -1,3 +1,4 @@
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Facebook,
   Instagram,
@@ -7,8 +8,39 @@ import {
   Phone,
   Twitter,
 } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
+const formSchema = z.object({
+  firstName: z.string().min(2, "First name must be at least 2 characters"),
+  lastName: z.string().min(2, "Last name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  interest: z.string().min(1, "Please select an interest"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+  });
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      console.log(data);
+      reset();
+    } catch (error) {
+      console.error("Email sending error:", error);
+      alert("Failed to send message. Please try again later.");
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
@@ -24,7 +56,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h3 className="text-2xl font-bold mb-6">Contact Form</h3>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
@@ -36,9 +68,15 @@ const Contact = () => {
                   <input
                     type="text"
                     id="first-name"
+                    {...register("firstName")}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                     placeholder="John"
                   />
+                  {errors.firstName && (
+                    <p className="text-red-500 text-sm">
+                      {errors.firstName.message}
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label
@@ -49,10 +87,16 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    {...register("lastName")}
                     id="last-name"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                     placeholder="Doe"
                   />
+                  {errors.lastName && (
+                    <p className="text-red-500 text-sm">
+                      {errors.lastName.message}
+                    </p>
+                  )}
                 </div>
               </div>
               <div>
@@ -65,9 +109,13 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  {...register("email")}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="example@email.com"
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm">{errors.email.message}</p>
+                )}
               </div>
               <div>
                 <label
@@ -79,6 +127,7 @@ const Contact = () => {
                 <select
                   id="interest"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                  {...register("interest")}
                 >
                   <option value="">Select your interest</option>
                   <option value="real-estate">Real Estate & Development</option>
@@ -88,6 +137,11 @@ const Contact = () => {
                   <option value="technology">Technology & Innovation</option>
                   <option value="other">Other</option>
                 </select>
+                {errors.interest && (
+                  <p className="text-red-500 text-sm">
+                    {errors.interest.message}
+                  </p>
+                )}
               </div>
               <div>
                 <label
@@ -98,16 +152,23 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  {...register("message")}
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="Tell us about your investment goals..."
                 ></textarea>
+                {errors.message && (
+                  <p className="text-red-500 text-sm">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
               <button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
