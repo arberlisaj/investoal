@@ -20,6 +20,17 @@ const WhoWeAre = () => {
               creation. Our goal is to develop a diverse portfolio that drives
               economic progress and opens doors for forward-thinking investors.
             </p>
+            <h2 className="text-3xl font-bold mb-4 mt-8">What we do</h2>
+            <div className="h-1 w-20 bg-red-600 mb-6"></div>
+
+            <p className="text-gray-600 text-lg">
+              We specialize in investment consultancy, real estate, and project
+              development. Our services include constructing residential,
+              commercial, and high-rise buildings, restoring significant
+              structures, and providing infrastructure solutions like roadworks,
+              electrification, and urban planning. With expert teams, we ensure
+              efficient and sustainable execution.
+            </p>
           </div>
           <div className="order-1 md:order-2">
             <div className="relative">
