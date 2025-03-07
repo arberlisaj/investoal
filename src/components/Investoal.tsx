@@ -1,20 +1,7 @@
 const Investoal = () => {
   return (
     <div className="bg-gray-100 text-gray-800">
-      <section
-        id="home"
-        className="h-screen flex items-center justify-center text-center px-6"
-      >
-        <div>
-          <h2 className="text-4xl font-bold text-blue-600">
-            Unlocking Investment Potential in Albania
-          </h2>
-          <p className="mt-4 text-lg">
-            Albania is a rapidly growing economy with strategic access to
-            European and global markets.
-          </p>
-        </div>
-      </section>
+
 
       <section id="about" className="py-20 bg-white px-6 text-center">
         <h2 className="text-3xl font-bold text-blue-600">Who We Are</h2>

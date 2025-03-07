@@ -1,13 +1,11 @@
-import Investoal from "./components/Investoal";
+import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
-function App() {
+export default function InvestoalHero() {
   return (
-    <main>
+    <>
       <Navbar />
-      <Investoal />
-    </main>
+      <Hero/>
+    </>
   );
 }
-
-export default App;

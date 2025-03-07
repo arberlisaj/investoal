@@ -28,7 +28,7 @@ const Navbar = () => {
                 <li key={section}>
                   <a
                     href={`#${section}`}
-                    className="hover:text-blue-600 capitalize"
+                    className="hover:text-[#b21933] capitalize"
                   >
                     {section.replace("-", " ")}
                   </a>
