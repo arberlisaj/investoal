@@ -27,12 +27,16 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <button className="cursor-pointer bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md transition-colors flex items-center justify-center gap-2 font-medium">
-              Explore Opportunities
-              <ArrowRight className="h-5 w-5" />
+            <button className="cursor-pointer bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md transition-colors font-medium">
+              <a href="#about" className="flex items-center gap-2">
+                Explore Opportunities
+                <ArrowRight className="h-5 w-5" />
+              </a>
             </button>
             <button className="cursor-pointer bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-md transition-colors">
-              Schedule Consultation
+              <a className="no-underline text-inherit" href="#contact">
+                Schedule Consultation
+              </a>
             </button>
           </div>
 
