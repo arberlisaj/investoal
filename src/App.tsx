@@ -13,7 +13,7 @@ const Footer = lazy(() => import("./components/Footer"));
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
-    <div className="h-12 w-12 rounded-full border-4 border-primary border-t-transparent animate-[spin_1s_linear_infinite]"></div>
+    <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-primary border-gray-300"></div>
   </div>
 );
 
