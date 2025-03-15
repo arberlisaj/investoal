@@ -1,4 +1,4 @@
-const CTA = () => {
+const JoinUs = () => {
   return (
     <section className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-4 md:px-6 text-center">
@@ -11,11 +11,11 @@ const CTA = () => {
           growing market. Let's build something great together!
         </p>
         <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors">
-          Start Your Investment Journey
+          <a href="#contact">Start Your Investment Journey</a>
         </button>
       </div>
     </section>
   );
 };
 
-export default CTA;
+export default JoinUs;

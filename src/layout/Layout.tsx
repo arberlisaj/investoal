@@ -1,16 +1,14 @@
 import { lazy, Suspense, useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
 
-const Hero = lazy(() => import("./components/Hero"));
-const About = lazy(() => import("./components/About"));
-const WhoWeAre = lazy(() => import("./components/WhoWeAre"));
-const Vision = lazy(() => import("./components/Vision"));
-const Focus = lazy(() => import("./components/Focus"));
-const WhyJoinUs = lazy(() => import("./components/WhyJoinUs"));
-const CTA = lazy(() => import("./components/CTA"));
-const Contact = lazy(() => import("./components/Contact"));
-const Sponsors = lazy(() => import("./components/Sponsors"));
-const Footer = lazy(() => import("./components/Footer"));
+const Navbar = lazy(() => import("./Navbar"));
+const Home = lazy(() => import("../pages/Home"));
+const About = lazy(() => import("../pages/About"));
+const Vision = lazy(() => import("../components/Vision"));
+const JoinUs = lazy(() => import("../components/JoinUs"));
+const Focus = lazy(() => import("../pages/Focus"));
+const Contact = lazy(() => import("../pages/Contact"));
+const Sponsors = lazy(() => import("../components/Sponsors"));
+const Footer = lazy(() => import("./Footer"));
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -18,7 +16,7 @@ const LoadingSpinner = () => (
   </div>
 );
 
-export default function InvestoalHero() {
+const Layout = () => {
   const [isInitialLoading, setIsInitialLoading] = useState(true);
 
   useEffect(() => {
@@ -42,17 +40,17 @@ export default function InvestoalHero() {
     <>
       <Navbar />
       <Suspense fallback={<LoadingSpinner />}>
-        <Hero />
+        <Home />
         <About />
-        <WhoWeAre />
         <Vision />
         <Focus />
-        <WhyJoinUs />
-        <CTA />
+        <JoinUs />
         <Sponsors />
         <Contact />
         <Footer />
       </Suspense>
     </>
   );
-}
+};
+
+export default Layout;
